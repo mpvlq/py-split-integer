@@ -13,7 +13,8 @@ def test_should_split_into_equal_parts_when_value_divisible_by_parts() -> None:
     for part in parts:
         assert (
             part == parts[0]
-        ), "Every part should be equal if value is divisible by number of parts"
+        ), ("Every part should be equal if "
+            "value is divisible by number of parts")
 
 
 def test_should_return_part_equals_to_value_when_split_into_one_part() -> None:
