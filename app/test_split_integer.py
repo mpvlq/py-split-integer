@@ -3,7 +3,7 @@ from app.split_integer import split_integer
 
 def test_sum_of_the_parts_should_be_equal_to_value() -> None:
     assert (
-        sum(split_integer(17, 4)) == 17
+        split_integer(17, 4) == [4, 4, 4, 5]
     ), "Sum of parts should be equal to 32"
 
 
@@ -28,5 +28,5 @@ def test_parts_should_be_sorted_when_they_are_not_equal() -> None:
 
 def test_should_add_zeros_when_value_is_less_than_number_of_parts() -> None:
     assert (
-        split_integer(3, 6)[: -3] == [0, 0, 0]
+        split_integer(3, 6) == [0, 0, 0, 1, 1, 1]
     ), "Function should add zeros if value is less than number of parts"
